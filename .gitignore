@@ -1,0 +1,34 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# .NET build files
+**/bin/
+**/obj/
+
+# React and Node.js
+**/node_modules/
+**/dist/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local development settings
+**/appsettings.Development.json
+secrets.json
+
+# Logs
+*.log
+
+# Uploaded documents
+**/Documents/
+
+# Local database files
+*.mdf
+*.ldf
+# Local application settings containing secrets
+backend/EmployeePolicyAI.API/appsettings.json
+backend/EmployeePolicyAI.API/appsettings.Development.json

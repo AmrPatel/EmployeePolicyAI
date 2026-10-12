@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #202938;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: white;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3157c8;
+}
+
+.header-subtitle {
+    color: #667085;
+    font-size: 14px;
+}
+
+.chat-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 25px 0 30px;
+}
+
+.welcome-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #e8edff;
+    color: #3157c8;
+    font-size: 30px;
+}
+
+.welcome h1 {
+    margin: 20px 0 12px;
+    font-size: 32px;
+}
+
+.welcome > p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #667085;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+    .suggestions button {
+        padding: 11px 15px;
+        border: 1px solid #dce2ef;
+        border-radius: 20px;
+        background: white;
+        color: #344054;
+        cursor: pointer;
+    }
+
+        .suggestions button:hover {
+            border-color: #3157c8;
+            background: #f0f3ff;
+        }
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    padding: 20px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #e5e9f0;
+    overflow-wrap: anywhere;
+}
+
+    .message.user {
+        background: #edf2ff;
+        border-color: #d9e2ff;
+    }
+
+.message-label {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3157c8;
+}
+
+.message-content {
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.sources {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e5e9f0;
+}
+
+    .sources h3 {
+        margin: 0 0 12px;
+        font-size: 15px;
+    }
+
+.source-card {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 8px;
+    background: #f8f9fc;
+    border: 1px solid #e5e9f0;
+}
+
+    .source-card strong {
+        font-size: 13px;
+    }
+
+    .source-card p {
+        margin-bottom: 0;
+        line-height: 1.6;
+        color: #475467;
+    }
+
+.loading {
+    padding: 15px;
+    color: #667085;
+    text-align: center;
+}
+
+.error-message {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #b42318;
+}
+
+.chat-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #dce2ef;
+    border-radius: 14px;
+}
+
+    .chat-form input {
+        flex: 1;
+        min-width: 0;
+        padding: 12px;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .chat-form button {
+        padding: 12px 22px;
+        border: none;
+        border-radius: 9px;
+        background: #3157c8;
+        color: white;
+        cursor: pointer;
+    }
+
+        .chat-form button:hover {
+            background: #2446ad;
+        }
+
+        .chat-form button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+.disclaimer {
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #667085;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px;
+    }
+
+    .chat-container {
+        margin-top: 20px;
+        padding: 0 14px;
+    }
+
+    .welcome h1 {
+        font-size: 26px;
+    }
+
+    .chat-form {
+        gap: 5px;
+        padding: 7px;
+    }
+
+        .chat-form button {
+            padding: 10px 13px;
+        }
+}
+.upload-panel {
+    margin-bottom: 30px;
+    padding: 22px;
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+}
+
+    .upload-panel h2 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .upload-panel p {
+        color: #667085;
+        line-height: 1.6;
+    }
+
+.upload-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+    .upload-form input {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px;
+        border: 1px solid #dce2ef;
+        border-radius: 8px;
+    }
+
+    .upload-form button {
+        padding: 12px 18px;
+        color: white;
+        background: #3157c8;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+        .upload-form button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+.upload-status {
+    margin-bottom: 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .upload-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+        .upload-form input,
+        .upload-form button {
+            width: 100%;
+        }
+}
+.sources {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #dce3eb;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.sources h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.source-card {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 6px;
+    background: white;
+    overflow-wrap: anywhere;
+}
+
+.source-card p {
+    margin: 8px 0;
+}
+
+.source-card summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.sources {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1px solid #dce3eb;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+    .sources h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+.source-card {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-left: 4px solid #4a90e2;
+    border-radius: 6px;
+    background: white;
+    overflow-wrap: anywhere;
+}
+
+    .source-card p {
+        margin: 8px 0;
+    }
+
+    .source-card summary {
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 8px;
+    }

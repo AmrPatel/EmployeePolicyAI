@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 1711159d-702f-4a56-8687-fcce6bc4e9f9
+
+localResources:
+  specs:
+    - ../obj/Debug/net10.0/EndpointInfo/EmployeePolicyAI.API.json
